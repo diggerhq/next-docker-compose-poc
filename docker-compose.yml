@@ -47,7 +47,7 @@ services:
     environment:
       # "postgresql://postgres:your-super-secret-and-long-postgres-password@localhost:15432/postgres"
       DIGGER_DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:5432/${POSTGRES_DB}
-      DIGGER_HOSTNAME: ${DIGGER_HOST_URL}:8888
+      DIGGER_HOSTNAME: ${HOST_URL}:8888
       DIGGER_SUPABASE_PROJECT_REF: ${STUDIO_DEFAULT_PROJECT}
       DIGGER_WEBHOOK_SECRET: ${DIGGER_WEBHOOK_SECRET}
       GITHUB_APP_ID: ${DIGGER_GITHUB_APP_ID}
