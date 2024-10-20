@@ -54,6 +54,8 @@ services:
       GITHUB_APP_CLIENT_ID: ${DIGGER_GITHUB_APP_CLIENT_ID}
       GITHUB_APP_CLIENT_SECRET: ${DIGGER_GITHUB_APP_CLIENT_SECRET}
       GITHUB_APP_PRIVATE_KEY_BASE64: ${DIGGER_GITHUB_APP_PRIVATE_KEY_BASE64}
+      # to have the github wizard exposed ,remove line to not have wizard
+      DIGGER_EXPOSE_GITHUB_APP_WIZARD: "true"
     ports:
       - 8888:3000
 
