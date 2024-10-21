@@ -25,6 +25,7 @@ services:
         - DIGGER_WEBHOOK_SECRET=${DIGGER_WEBHOOK_SECRET}
         - DIGGER_TRIGGER_APPLY_URL=http://digger-next-backend:3000/_internal/runs
         - NEXT_PUBLIC_GITHUB_APP_SLUG=${DIGGER_GITHUB_APP_SLUG}
+        - NEXT_PUBLIC_HIDE_FREE_TRIAL_DIALOG="true"
     environment:
       SB_SSO_DOMAIN: ${SB_SSO_DOMAIN}
       NEXT_PUBLIC_SUPABASE_URL: ${HOST_URL}:8000
@@ -38,6 +39,7 @@ services:
       DIGGER_WEBHOOK_SECRET: ${DIGGER_WEBHOOK_SECRET}
       DIGGER_TRIGGER_APPLY_URL: http://digger-next-backend:3000/_internal/runs
       NEXT_PUBLIC_GITHUB_APP_SLUG: ${DIGGER_GITHUB_APP_SLUG}
+      NEXT_PUBLIC_HIDE_FREE_TRIAL_DIALOG: "true"
     ports:
       - 8080:3000
 
