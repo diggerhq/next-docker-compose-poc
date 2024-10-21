@@ -262,7 +262,7 @@ services:
       - name: cors
 
   - name: health-check
-    url: http://localhost:8001/status
+    url: http://kong:8001/status
     routes:
       - name: health-route
         paths:
