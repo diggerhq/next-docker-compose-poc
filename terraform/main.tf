@@ -45,10 +45,10 @@ resource "aws_security_group" "ec2_sg" {
 
 
   ingress {
-    from_port       = 22
-    to_port         = 22
-    protocol        = "tcp"
-    security_groups = ["0.0.0.0/0"]
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   # Outbound rule
@@ -119,7 +119,7 @@ resource "aws_instance" "app_server" {
 
 # Application Load Balancer
 resource "aws_lb" "app_lb" {
-  name               = "app-lb"
+  name               = "digger-poc-lb"
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.alb_sg.id]
