@@ -126,7 +126,7 @@ resource "aws_lb" "app_lb" {
   subnets            = data.aws_subnets.default.ids
 
   tags = {
-    Name = "app-lb"
+    Name = "digger-poc-lb"
   }
 }
 
