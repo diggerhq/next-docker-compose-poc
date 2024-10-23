@@ -5,3 +5,8 @@ test.http
 docker-compose.override.yml
 digger/
 next/
+**/.terraform
+**/.terraform.lock.hcl
+**/.terraform.tfstate*
+**/terraform.tfstate*
+
