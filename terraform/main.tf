@@ -1,6 +1,6 @@
 # Provider configuration
 provider "aws" {
-  region = "us-east-2" # Change to your desired region
+  region = "us-east-1" # Change to your desired region
 }
 
 # VPC Data Source (assuming you're using default VPC)
@@ -107,7 +107,7 @@ resource "aws_security_group" "alb_sg" {
 
 # EC2 Instance
 resource "aws_instance" "app_server" {
-  ami           = "ami-0276ce36440fa7224" # Amazon Linux 2 AMI - update with desired AMI
+  ami           = "ami-07c8d9c82239b2951" # Amazon Linux 2 AMI - update with desired AMI
   instance_type = "m5.2xlarge"
 
   security_groups = [aws_security_group.ec2_sg.name]
