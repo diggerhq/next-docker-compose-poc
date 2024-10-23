@@ -24,7 +24,7 @@ services:
         - GITHUB_PROXY_CALLBACK_URL=http://digger-next-backend:3000/github/callback_fe
         - DIGGER_WEBHOOK_SECRET=${DIGGER_WEBHOOK_SECRET}
         - DIGGER_TRIGGER_APPLY_URL=http://digger-next-backend:3000/_internal/runs
-        - NEXT_PUBLIC_GITHUB_APP_SLUG=${DIGGER_GITHUB_APP_SLUG}
+        - NEXT_PUBLIC_GITHUB_APP_SLUG=${DIGGER_GITHUB_ORG}
         - NEXT_PUBLIC_HIDE_FREE_TRIAL_DIALOG=true
         - NEXT_PUBLIC_SKIP_ORG_CREATION=true
     environment:
@@ -39,7 +39,7 @@ services:
       GITHUB_PROXY_CALLBACK_URL: http://digger-next-backend:3000/github/callback_fe
       DIGGER_WEBHOOK_SECRET: ${DIGGER_WEBHOOK_SECRET}
       DIGGER_TRIGGER_APPLY_URL: http://digger-next-backend:3000/_internal/runs
-      NEXT_PUBLIC_GITHUB_APP_SLUG: ${DIGGER_GITHUB_APP_SLUG}
+      NEXT_PUBLIC_GITHUB_APP_SLUG: ${DIGGER_GITHUB_ORG}
       NEXT_PUBLIC_HIDE_FREE_TRIAL_DIALOG: "true"
       NEXT_PUBLIC_SKIP_ORG_CREATION: "true"
     ports:
