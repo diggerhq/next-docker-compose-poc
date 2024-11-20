@@ -28,7 +28,7 @@ services:
         - NEXT_PUBLIC_GITHUB_APP_SLUG=${DIGGER_GITHUB_APP_SLUG}
         - NEXT_PUBLIC_HIDE_FREE_TRIAL_DIALOG=true
         - NEXT_PUBLIC_SKIP_ORG_CREATION=true
-        - DATABASE_URL=postgresql://postgres:${POSTGRES_PASSWORD}@host.docker.internal:15432/${POSTGRES_DB}
+        - DATABASE_URL=postgresql://postgres:${POSTGRES_PASSWORD}@172.17.0.1:15432/${POSTGRES_DB}
     environment:
       NEXT_PUBLIC_SB_SSO_DOMAIN: ${SB_SSO_DOMAIN}
       NEXT_PUBLIC_SUPABASE_URL: ${HOST_URL}:8000
@@ -50,7 +50,7 @@ services:
       AUTH_OKTA_ID: ${AUTH_OKTA_ID}
       AUTH_OKTA_SECRET: ${AUTH_OKTA_SECRET}
       AUTH_OKTA_ISSUER: ${AUTH_OKTA_ISSUER}
-      DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD}@host.docker.internal:15432/${POSTGRES_DB}
+      DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD}@172.17.0.1:15432/${POSTGRES_DB}
     ports:
       - 8080:3000
     depends_on:
