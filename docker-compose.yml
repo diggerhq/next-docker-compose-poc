@@ -53,6 +53,9 @@ services:
       DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD}@host.docker.internal:15432/${POSTGRES_DB}
     ports:
       - 8080:3000
+    depends_on:
+      db:
+        condition: service_healthy
 
   digger-next-backend:
     container_name: digger-next-backend
