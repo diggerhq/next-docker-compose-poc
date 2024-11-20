@@ -8,7 +8,6 @@ name: digger-next-poc
 
 services:
   digger-next-ui:
-    network_mode: "host"
     container_name: digger-next-ui
     build:
       context: ./next
