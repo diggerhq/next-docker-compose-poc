@@ -13,6 +13,7 @@ services:
     build:
       context: ./next
       dockerfile: Dockerfile
+      network: host
       args:
         - NEXT_PUBLIC_SB_SSO_DOMAIN=${SB_SSO_DOMAIN}
         - NEXT_PUBLIC_SUPABASE_URL=${HOST_URL}:8000
